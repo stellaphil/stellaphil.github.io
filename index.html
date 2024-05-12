@@ -2,7 +2,7 @@
 <html class="staticrypt-html">
     <head>
         <meta charset="utf-8" />
-        <title>Protected Page</title>
+        <title>phil+stella</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- do not cache this page -->
@@ -14,10 +14,10 @@
 
         <style>
             .staticrypt-hr {
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
                 border: 0;
-                border-top: 1px solid #eee;
+                /* border-top: 1px solid #eee; */
             }
 
             .staticrypt-page {
@@ -30,12 +30,13 @@
             .staticrypt-form {
                 position: relative;
                 z-index: 1;
-                background: #ffffff;
+                background: #24c21f;
                 max-width: 360px;
                 margin: 0 auto 100px;
                 padding: 45px;
                 text-align: center;
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+                border: solid black 3px;
+                /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
             }
 
             .staticrypt-form input[type="password"],
@@ -52,9 +53,9 @@
             .staticrypt-password-container {
                 position: relative;
                 outline: 0;
-                background: #f2f2f2;
+                background: #fad5c4;
                 width: 100%;
-                border: 0;
+                border: solid black 2px;
                 margin: 0 0 15px;
                 box-sizing: border-box;
             }
@@ -72,21 +73,22 @@
             }
 
             .staticrypt-form .staticrypt-decrypt-button {
-                text-transform: uppercase;
+                /* text-transform: uppercase; */
                 outline: 0;
-                background: #4CAF50;
+                background: #fad5c4;
                 width: 100%;
-                border: 0;
+                border: solid black 2px;
                 padding: 15px;
-                color: #ffffff;
+                color: #black;
                 font-size: 14px;
+                font-weight: 550;
                 cursor: pointer;
             }
 
             .staticrypt-form .staticrypt-decrypt-button:hover,
             .staticrypt-form .staticrypt-decrypt-button:active,
             .staticrypt-form .staticrypt-decrypt-button:focus {
-                background: #4CAF50;
+                background: #f0b092;
                 filter: brightness(92%);
             }
 
@@ -102,8 +104,8 @@
             .staticrypt-content {
                 height: 100%;
                 margin-bottom: 1em;
-                background: #76B852;
-                font-family: "Arial", sans-serif;
+                background: #f0b092;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
@@ -114,7 +116,8 @@
             }
 
             .staticrypt-title {
-                font-size: 1.5em;
+                font-size: 2em;
+                font-weight: 550;
             }
 
             label.staticrypt-remember {
@@ -144,7 +147,7 @@
                 width: 2rem;
                 height: 2rem;
                 vertical-align: text-bottom;
-                border: 0.25em solid gray;
+                border: 0.25em solid black;
                 border-right-color: transparent;
                 border-radius: 50%;
                 -webkit-animation: spinner-border 0.75s linear infinite;
@@ -176,7 +179,7 @@
             <div class="staticrypt-page">
                 <div class="staticrypt-form">
                     <div class="staticrypt-instructions">
-                        <p class="staticrypt-title">Protected Page</p>
+                        <p class="staticrypt-title">phil+stella</p>
                         <p></p>
                     </div>
 
@@ -188,7 +191,7 @@
                                 id="staticrypt-password"
                                 type="password"
                                 name="password"
-                                placeholder="Password"
+                                placeholder="password"
                                 autofocus
                             />
 
@@ -202,10 +205,10 @@
 
                         <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
                             <input id="staticrypt-remember" type="checkbox" name="remember" />
-                            Remember me
+                            remember me
                         </label>
 
-                        <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT" />
+                        <input type="submit" class="staticrypt-decrypt-button" value="enter" />
                     </form>
                 </div>
             </div>
@@ -815,7 +818,7 @@ exports.init = init;
                 templateToggleAltShow = "template_toggle_show",
                 templateToggleAltHide = "template_toggle_hide",
                 isRememberEnabled = true,
-                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"64312fd6abea2c04bd33ab04a477a055990e77ecda3798f916d90f25b82c3b031c1e16e70a60bdc866a3e685c7d8459bdb8d79093cd975d46c07614f43445311ae9e3797d286acebc418abedd385508cd09d853d64b82b8f13bc006a0043fac8e2bb8389fb1d243296008146260897d31ef8966d6496bd66c2214c081924a05d01d5ad3cf875b5e6e31a50895e912e35be3654a76fdfb06603778df3c8650798cc4a086f9665ce93e30f538ac9d8e15f6363a7a759a338110b866423ae0122a4dff35c3c92a3393469b4bb458195f3cda9bf6dfe544f1abe98af7375084843b8f3a6cfeb181573ef06c3e4f9a1dd430182c1e36d9661361cf171f95c694b0fe5be40a7f6fdb07c6e8f078fe6c554a96c3828ab47b28903093c680ff1343c360420368526b70cdd265c0413e8f8c9734e7cc47612409dc92117ddfd05699325641875fc173a8d12b84661351b880da971052f18bdf63075f245f6252bc5c32515bbf0377ab49a98b89ba4fa6d4028913e822044dfbd05b8c9fc787f17ae88506f71f1fb32fac1f823fcfe10c5e5d1a307b73cbcff23f807b5cd7555e8d9ffe3c26d3314ed3bc1d8fee7816d6ca96fb5424f329d9ea617d7ccb85a15e269b0a0d2bdbdd8052d6f8ad879fc1cf87bf1d071ba79c829da3285f1e41a956968d65c68375e217b28df1d04cedf207c25ca0a71a96f60259d9af7035f435b85e83cd910462a6898f989dd97fa1d7756bcf8ecae56391def586e8c029f08805d0678a918e2b1a2ae1a58f763bd319c178de9fdbcf935df719241e889082c4867c47dca67cf0ff00b4388b593db13b0235cad217da6f86195e2386d292cddbac69ef42a20073327934d2d0fda5440087bb91a7fae82dd30c72f0406eb71687b2625d9694ecc31913ec248327eb38485347428bfce54f3139a7e567bf63a116ae01429ed9e5713f7038d883184867170d598edccca65fc2e5ef4dcf3c2dd3e05a5cec0013c8c3d9ac9e42a0e65e88273c1140f567f3e202ace88f7b758da39eeaf6f519f05230c8804d9b77c894c813e583f09422fa32583c34b3df1f0210b1176afb096f65d4f0baf6509af9a98bef3f6a858471bab7d6845951d204b7b28b18412e5fa15b9825460c4a26d7e6dc45e73dce04f1dfc3906d80514792cdb98b1aa4bce4c1d604c197fffebc2d4e5d48f307447c9f6ea63bc7fe468a7d44ff08d52c073713025bd9deafb2764e64daf109ed96835aa9d575ab8b8ef347cebb1f62b20db66d7f57c246b522aff5dddb3ec9c38faf633a4b8bf0bad222fceb53cfb6610a042c2cf22a799b831768845c33628ad34b4886159e15a5d6a3407736ade8f3d8b0367393c93f33df5a834a09902d7d59f008bce88f1be5bd5cfcf2e871b41e968832c14646cf4038605a86938c4b0dfc51d17ddc64dbc2c97308518527a45deceae82d907d41b5621836103a06af57f2cef2d975865186bd8c635dfc010985489bd1f23989cb89a99bbaf0742cd7dfdd1e75bc1b60dcdc8b4a01b03ff12eb4569779c394cd325ae977fc8095d2a332e912be20a6731486d751a313acfa937baf2aec6e35b0a7019c3218bd5efa062c5311e38cacdc03e4c53804078e95777f98a7a3c81c5c946c2b6ae6fc4ea55a86ce9b6d997e58ded773d0aa3e960d6d03281c613dc421d7a2f79769244d1e78334fc458e0c7ba54555775f46eea19227443d1abf8b3c2d100db5c139629f1e52df4cf25f20008431b9ff74146c95124f39cf4e611b6973952fb2713581d826c81ae3f58a24a5c9f2306cb95f42135f5183fb2413125075ac27730c9b083c2ca2d902da86","isRememberEnabled":true,"rememberDurationInDays":0,"staticryptSaltUniqueVariableName":"b31b8f9a63a9b9dfe3c6a8e45f6c5f8e"};
+                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"b5a48c08bb355755c069e9aa0426e9b67013e299fb5286961bbdb3b97dcb2187e219ecbc95e5927677431ed226d8ed4de506db0dc72f159e082d960f6026c2d2d0127a89573d7d3fac880367159b2b287ef8004ac3ab1a33a4e2e56efddca6e458859a765b54723d4be7f6165e2810db0e316a38c851d297d9560c71f3d8a54e91fb48aa30afeb8d3bdbcbad02e858aad23490d32030662f08ab16abd03646471dce8218abfcbc519ff94d642db3bc6b2b610785a60cfb81811084f98f4b1147b5acef50ce9946fb9b7652180d59960fdb1617bf41ae1251d74d1a74a8b60258868f7f610283cfde026a57f9363ac39d16f13a26db079b086bcbceea1ae9b6fa895212d1b8f8be1f86dac9465481ebffc2bef8e56c1fd50b404365b3541f74947907689b2cdd3e329ba5524b9cf68dd041be84c61297f2a54643e13f0653fdff0ee839fdc2fedacec39ef9e9dc25b70b2886d7c1e8978d8f75655c4d2ed3a16998695169f1fe58cf82525a1149558d2e37493f3ab6544f300ce433f16960d8a358057e7801d900925a239a70ae18be9fc913f01710048ef6b1a26f9d04a0bef1afdde37d7f7ef2e33c0488282494c5c845ba6789789232df1900e4a02d6cfd297b5c3e97ef5dfd0c3af9ca861ffa81da4734aad9162892d3f299089705bf3b0e0644b35870ca5db7440792d562cce86c3cf7140cddf6f2b2e46e65cb56d3065014d1542ae18993e06d2ffd4d8f2f707fc0bd95523ac8a814ac2dd2febb3b1b4e7e930aa8bcc3ab41bf15c6c69eab552f54b056e337cdd38d47bcfd2e76e82193df70873349858aec9d585784ed9b363571dc94932c4db5a094bbd672bbea801193975cff16b400fd06ed61389459991d3c4dbda81d1fe90135c36bd7747586d61458d59465722f1fc7e889dfb76b357c6b53ee0f7cadeed782c60adef5e1f96d1dfc5693ed42e046f81bff0cebe4cebafc8a3d9e24187f2631431c521909719578e3a082bdf4d1b8def267dbb89ef21eab2669827803a65d969b3698ebac7831b23573652f1cf3dfe2bdf8d1a74fd4caa0683e0578b3e0d2b51c0a04cd576bc4f1aef4b1e9917fd446beb4ea466a5fcfa20bbbfa4d1cf4245818da4cf7b265c1ab4bd3459dd95793d5083754c4a447e8d5a3d7c9c94a4eb0a07d581ed1cc7e93e77b39680a93240dcf6f9469095fe0a5c9fec18ffe3a01b77a27f4ece5721bf9c2e79beabc06bb3cdc994eb5d3d1dc61dd171bbb60c1cff454286913049cb06819b543f8e6ea03474d3e549391717a3782f046d13e4ba94e5cfb20ab59ccdf6f313e4eda859700e153cf1d36aa139598e92ec879c40954c15b9a61c2dc249194a749135ef7636ecc1779afd8719f8e9d5223b4e3298efa218844c2af6384b9912361c4700fb13b888c9db7ab1ef2de0065006abb581d974ce2e3dfff26b808b02fa7f415bc827c936a7e2c5d2ae33ca4051416f4b5b996c58eaec08124598b8b1cf94f07bf26b183006c3e905b62166e8e6ba502fd6489e7dd52065f3155437eb78bfa40df77f141e3341140a541ddcece79395e76265cebe7c6a3ff8f314d590048748b7c6329247ccb862dc93412302d88d6eef00a6b4b2dc546a6980add6045777c7330002055aaf9a55d0914b1d21b2e729d5ec8cf44be3ba2d5d55fb4225e1495861c6ca5902bea7643fc9fbe820baaaf0b75845f7caa3f333a2e4030f5bcf39e095cecc3df14a4bde875aaf4255cf412ac43a07e7b642ef04676f47173a36cd2cafbbcad7a02084625f75b043dc8560d74943ae00c6a8408d985f0ed496c8cdc51fa8520792d668675ca019a3c","isRememberEnabled":true,"rememberDurationInDays":"7","staticryptSaltUniqueVariableName":"a27ed3e7791ba0e48db5ad6f4bb8e408"};
 
             // you can edit these values to customize some of the behavior of StatiCrypt
             const templateConfig = {
