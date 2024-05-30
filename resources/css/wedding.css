@@ -120,7 +120,8 @@ audio::-webkit-media-controls-panel {
       font-size: 12px;
     }
     body {
-        background-size: 100%;
+        /* check if this is issue with zoom */
+        background-size: 95%;
     }
     
     .empty-box {
