@@ -147,8 +147,8 @@ audio::-webkit-media-controls-panel {
         min-height: 150px;
     }
 
-    .image-container img {
- 
+    .button:hover {
+        background-color: #f0b092;
     }
 
     #star {
