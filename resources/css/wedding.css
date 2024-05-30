@@ -121,6 +121,7 @@ audio::-webkit-media-controls-panel {
     }
     body {
         background-size: 100%;
+        background-image: url("../images/collage_map_small.jpg");
     }
     
     .empty-box {
