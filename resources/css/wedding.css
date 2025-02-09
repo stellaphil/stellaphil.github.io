@@ -5,30 +5,68 @@
 body {
     background-image: url("../images/collage_map.jpg");
     font-size: 1.25rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Helvetica, 'Trebuchet MS', sans-serif;
     background-attachment: scroll, local;
     background-size: 100%;
-    background-repeat: repeat;
+    background-repeat: repeat;   
+}
+
+strong {
+    font-weight: 620;
 }
 
 .text-box {
-    background: #fa5c00;
     padding: 1.5rem 2rem;
-    width: 25rem;
-    height: 40%;
+    /*width: 25rem;*/
+    width: 40rem;
+    /*height: 40%;*/
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    /*margin-top: 50px; /* Add a top margin to avoid content overlay */
+    margin-top: 15%;
     justify-content: center;
     border: solid black 3px;
     position: relative;
+    scroll-margin-top: 100px;
 }
+
+/* Styling for the individual boxes */
+#intro {
+    background:#a7ba42;
+    margin-top: 125px;
+}
+
+#need-to-know {
+    background: #95ccba;
+    text-align: left;
+}
+
+#schedule {
+    background: #fff0cb;
+    text-align: center;
+}
+
+#accommodation {
+    background: #f3c4c0;
+    text-align: justify;
+}
+
+#travel {
+    background: #f2cc84;
+    text-align: justify;
+}
+
+#other {
+    background: #a7ba42;
+    text-align: justify;
+}
+
 
 .empty-box {
     opacity: 0;
-    height: 3000px;
+    height: 200px;
     width: 50%;
 }
 
@@ -44,6 +82,7 @@ h2 {
     font-size: 2.3rem;
     padding: 0;
     margin: 0.1rem;
+    text-align: center;
 }
 
 h3 {
@@ -53,10 +92,22 @@ h3 {
     margin: 0.2rem;
 }
 
-a {
+h4 {
     font-weight: 550;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0.2rem;
+}
+
+a {
+    font-weight: 600;
     font-size: 1.25rem;
-    color: rgb(138, 61, 138);
+    color: rgb(128, 76, 68);
+}
+
+ul {
+    list-style-position: outside;
+    /*list-style: none;*/
 }
 
 .button {
@@ -65,7 +116,7 @@ a {
     color: black;
     padding: 1rem 1.25rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0.25rem;
     transition: 0.3s;
     display: inline-block;
@@ -110,22 +161,54 @@ audio::-webkit-media-controls-panel {
     position: relative;
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: #f0b092;
+    z-index: 1;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 10px; /* Position the navbar at the top of the page */
+    right: 10px;
+    width: 500px; /* Full width */
+    border: solid black 3px;
+  }
+  
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1.1rem 1.2rem;
+    text-decoration: none;
+  }
+  
+.navbar a:hover {
+    background: #fff0cb;
+  }
+
 #star {
     width: 25%;
     overflow: visible;
+}
+
+#bottom-rsvp {
+    /* center this one */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 480px) {
     html {
       font-size: 12px;
     }
+
     body {
         background-size: 100%;
         background-image: url("../images/collage_map_small.jpg");
     }
     
     .empty-box {
-        height: 1000px;
+        height: 50px;
     }
 
     audio {
@@ -156,6 +239,10 @@ audio::-webkit-media-controls-panel {
         width: 10%;
     }
 
+    #intro {
+        margin-top: 60px;
+    }
+
     .button {
         border: solid black 1.5px;
     }
@@ -165,12 +252,58 @@ audio::-webkit-media-controls-panel {
         width: 80%;
     }
 
+    .navbar a {
+        padding: 0.4rem 0.4rem;
+      }
+
+    .navbar {
+        border: solid black 1.5px;
+        width: 80%;
+      }
+
+    
+    ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+
+    #need-to-know {
+        text-align: justify;
+    }
+      
   }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 680px) and (min-width: 480px) {
+    .text-box {
+        width: 80%;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 0.7rem 0.7rem;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+    .navbar {
+        width: 400px;
+    }
+
+    /*html {
+        font-size: 14px;
+    }*/
+
+}
+
+@media only screen and (min-width: 680px) {
     html {
         font-size: 16px;
     }
 
 }
+
+
 
